@@ -14,13 +14,26 @@
       background-size: cover;
       color: #fff;
     }
-    header h1 {
+    header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
   font-family: 'Orbitron', sans-serif;
   color: #ae81ff;
   font-size: 2.2rem;
   letter-spacing: 1px;
-  margin: 0;
+  margin: 0 auto;
   text-shadow: 0 0 8px #ae81ff99;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 nav a {
@@ -38,9 +51,16 @@ nav a:hover {
   color: #ae81ff;
   text-shadow: 0 0 8px #ae81ff88;
 }
+
     .hero {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
 }
 
 .hero::before {
@@ -49,16 +69,7 @@ nav a:hover {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
-  border-radius: 8px;
-}
-   @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  0%, 100% { border-color: transparent }
-  50% { border-color: #ae81ff }
+  border-radius: 0;
 }
 
 .hero h1 {
@@ -74,6 +85,14 @@ nav a:hover {
     blink 0.75s step-end infinite;
   color: #ae81ff;
 }
+
+.hero p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffffcc;
+  margin-top: 1rem;
+}
+
     .section {
       padding: 2rem;
       background-color: rgba(0, 0, 0, 0.7);
@@ -81,19 +100,26 @@ nav a:hover {
       border-radius: 10px;
     }
     .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .product {
-      background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product {
+  background: #111;
   border-radius: 15px;
   padding: 1rem;
   text-align: center;
   box-shadow: 0 0 15px #ae81ff88;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
+  max-width: 500px;
+  width: 100%;
 }
+
 
 .product:hover {
   transform: scale(1.05);
