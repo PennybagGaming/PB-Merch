@@ -5,23 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pennybag Gaming</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-
- <style>
-   
-   #loader {
-  z-index: 9999;
-  pointer-events: none;
-}
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,164 +17,146 @@
       background-size: cover;
       color: #fff;
     }
+    #loader {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #0d0d0d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      pointer-events: none;
+      font-family: 'Share Tech Mono', monospace;
+      color: #ae81ff;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
     header {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 1rem;
-  text-align: center;
-}
-
-header h1 {
-  font-family: 'Orbitron', sans-serif;
-  color: #ae81ff;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
-  margin: 0 auto;
-  text-shadow: 0 0 8px #ae81ff99;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
-}
-
-nav a {
-  font-family: 'Orbitron', sans-serif;
-  color: #ffffffcc;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 1px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ae81ff;
-  text-shadow: 0 0 8px #ae81ff88;
-}
-
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #ae81ff;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      margin: 0 auto;
+      text-shadow: 0 0 8px #ae81ff99;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      font-family: 'Orbitron', sans-serif;
+      color: #ffffffcc;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ae81ff;
+      text-shadow: 0 0 8px #ae81ff88;
+    }
     .hero {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-  border-radius: 0;
-}
-
-.hero h1 {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 2rem;
-  color: #ae81ff;
-  text-align: center;
-  margin: auto;
-  animation: glitchFadeIn 1.5s ease-in-out forwards;
-  opacity: 0;
-}
-
-@keyframes glitchFadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(1.05);
-    text-shadow: 0 0 5px #ae81ff88;
-  }
-  50% {
-    opacity: 0.4;
-    transform: scale(1.02);
-    text-shadow: 0 0 15px #ae81ff;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    text-shadow: 0 0 8px #ae81ffaa;
-  }
-}
-
-
-.hero p {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #ffffffcc;
-  margin-top: 1rem;
-}
-
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+    .hero h1 {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 2rem;
+      color: #ae81ff;
+      animation: glitchFadeIn 1.5s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes glitchFadeIn {
+      0% { opacity: 0; transform: scale(1.05); text-shadow: 0 0 5px #ae81ff88; }
+      50% { opacity: 0.4; transform: scale(1.02); text-shadow: 0 0 15px #ae81ff; }
+      100% { opacity: 1; transform: scale(1); text-shadow: 0 0 8px #ae81ffaa; }
+    }
+    .hero p {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      color: #ffffffcc;
+      margin-top: 1rem;
+    }
     .section {
       padding: 2rem;
       background-color: rgba(0, 0, 0, 0.7);
       margin: 2rem;
       border-radius: 10px;
     }
-    
-.product img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #ae81ffcc;
-  border-color: #ae81ff;
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-   .social-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-   .social-links a {
-  font-family: 'Orbitron', sans-serif;
-  color: #ffffffcc;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 10px #ae81ff33;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.social-links a:hover {
-  color: #ae81ff;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #ae81ff88;
-}
-
-.social-links i {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-}
-
-    .social-icons a {
-      margin: 0 0.5rem;
-      color: #fff;
-      font-size: 1.5rem;
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .product {
+      background: #111;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 15px #ae81ff88;
+      border: 2px solid transparent;
+      max-width: 500px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ae81ffcc;
+      border-color: #ae81ff;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .social-links a {
+      font-family: 'Orbitron', sans-serif;
+      color: #ffffffcc;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 10px #ae81ff33;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .social-links a:hover {
+      color: #ae81ff;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ae81ff88;
     }
     .video-gallery {
       display: grid;
@@ -198,225 +168,78 @@ nav a:hover {
       height: 200px;
       border: none;
     }
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ae81ff;
+      text-align: center;
+      padding: 1rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      box-shadow: 0 -2px 10px #ae81ff40;
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
-  <div id="loader" style="
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: #0d0d0d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  font-family: 'Share Tech Mono', monospace;
-  color: #ae81ff;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-">
-  Initializing Pennybag Protocol...
-</div>
-
+  <div id="loader">Initializing Pennybag Protocol...</div>
   <header>
-  <h1>Pennybag Gaming</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Merch</a>
-    <a href="#socials">Socials</a>
-    <a href="#videos">Clips</a>
-  </nav>
-</header>
-
- <section class="hero" id="home" data-aos="fade-up">
-  <h1>Initializing Pennybag Protocol...</h1>
-  <p>Explore the Matrix. Discover the drip. Join the movement.</p>
-</section>
-
+    <h1>Pennybag Gaming</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Merch</a>
+      <a href="#socials">Socials</a>
+      <a href="#videos">Clips</a>
+    </nav>
+  </header>
+  <section class="hero" id="home" data-aos="fade-up">
+    <h1>Initializing Pennybag Protocol...</h1>
+    <p>Explore the Matrix. Discover the drip. Join the movement.</p>
+  </section>
   <section class="section" id="products" data-aos="zoom-in">
-  <h2 style="text-align:center;">🛒 Pennybag Gear</h2>
-  <div class="product-grid">
-    <div class="product">
-      <img src="images/product_mockups.png" alt="Pennybag Merch" style="width:100%; border-radius: 12px; box-shadow: 0 0 15px #ae81ff;" />
-      <h3 style="margin-top: 1rem;">Pennybag Merch Drop</h3>
-      <p>Avatar gear: hoodie, snapback, stickers & more</p>
-      <button style="
-        background-color: #ae81ff;
-        border: none;
-        color: white;
-        padding: 0.6rem 1.2rem;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      " onmouseover="this.style.backgroundColor='#cfaaff'" 
-         onmouseout="this.style.backgroundColor='#ae81ff'">
-        Shop Now (Coming Soon)
-      </button>
+    <h2 style="text-align:center;">🛒 Pennybag Gear</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/product_mockups.png" alt="Pennybag Merch" style="border-radius: 12px; box-shadow: 0 0 15px #ae81ff;">
+        <h3 style="margin-top: 1rem;">Pennybag Merch Drop</h3>
+        <p>Avatar gear: hoodie, snapback, stickers & more</p>
+        <button style="background-color: #ae81ff; border: none; color: white; padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#cfaaff'" onmouseout="this.style.backgroundColor='#ae81ff'">Shop Now (Coming Soon)</button>
+      </div>
     </div>
-  </div>
-</section>
-
-
-    
-
+  </section>
   <section class="section" id="socials" data-aos="fade-left">
-  <h2 style="text-align:center;">🌐 Follow Pennybag</h2>
-  <div class="social-links">
-    <a href="https://www.tiktok.com/@pennybag276" target="_blank">
-      <i class="fab fa-tiktok"></i> TikTok: Pennybag Gaming
-    </a>
-    <a href="https://www.twitch.tv/Pennybag" target="_blank">
-      <i class="fab fa-twitch"></i> Twitch: Pennybag
-    </a>
-    <a href="https://www.youtube.com/@PennybagGaming" target="_blank">
-      <i class="fab fa-youtube"></i> YouTube: Pennybag Gaming
-    </a>
-    <a href="https://discord.gg/HwytCRHw" target="_blank">
-      <i class="fab fa-discord"></i> Discord: Join the Server
-    </a>
-  </div>
-</section>
-
-
-    <!-- YouTube -->
-    <a href="https://youtube.com/@PennybagGaming" target="_blank" style="
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #111;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 0 10px #ff000080;
-      transition: transform 0.3s, box-shadow 0.3s;
-    " onmouseover="this.style.boxShadow='0 0 20px #ff0000'; this.style.transform='scale(1.05)'" 
-       onmouseout="this.style.boxShadow='0 0 10px #ff000080'; this.style.transform='scale(1)'">
-      <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="YouTube" width="24px" />
-      YouTube: Pennybag Gaming
-    </a>
-
-    <!-- Twitch -->
-    <a href="https://www.twitch.tv/pennybag" target="_blank" style="
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #111;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 0 10px #9146ff80;
-      transition: transform 0.3s, box-shadow 0.3s;
-    " onmouseover="this.style.boxShadow='0 0 20px #9146ff'; this.style.transform='scale(1.05)'" 
-       onmouseout="this.style.boxShadow='0 0 10px #9146ff80'; this.style.transform='scale(1)'">
-      <i class="fab fa-twitch" style="font-size: 24px;"></i>
-      Twitch: Pennybag
-    </a>
-
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@pennybag276" target="_blank" style="
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #111;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 0 10px #00f2ea80;
-      transition: transform 0.3s, box-shadow 0.3s;
-    " onmouseover="this.style.boxShadow='0 0 20px #00f2ea'; this.style.transform='scale(1.05)'" 
-       onmouseout="this.style.boxShadow='0 0 10px #00f2ea80'; this.style.transform='scale(1)'">
-      <i class="fab fa-tiktok" style="font-size: 24px;"></i>
-      TikTok: Pennybag Gaming
-    </a>
-  
-    <!-- Discord -->
-<a href="https://discord.gg/HwytCRHw" target="_blank" style="
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #111;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 0 10px #5865f280;
-  transition: transform 0.3s, box-shadow 0.3s;
-" onmouseover="this.style.boxShadow='0 0 20px #5865f2'; this.style.transform='scale(1.05)'" 
-   onmouseout="this.style.boxShadow='0 0 10px #5865f280'; this.style.transform='scale(1)'">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" width="24px" />
-  Discord: Join the Server
-</a>
-
-  </div>
-</section>
+    <h2 style="text-align:center;">🌐 Follow Pennybag</h2>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@pennybag276" target="_blank"><i class="fab fa-tiktok"></i> TikTok: Pennybag Gaming</a>
+      <a href="https://www.twitch.tv/Pennybag" target="_blank"><i class="fab fa-twitch"></i> Twitch: Pennybag</a>
+      <a href="https://www.youtube.com/@PennybagGaming" target="_blank"><i class="fab fa-youtube"></i> YouTube: Pennybag Gaming</a>
+      <a href="https://discord.gg/HwytCRHw" target="_blank"><i class="fab fa-discord"></i> Discord: Join the Server</a>
+    </div>
+  </section>
   <section class="section" id="videos" data-aos="fade-right">
-  <h2 style="text-align:center;">🎥 Featured Clips</h2>
-  <div class="video-gallery">
-
-    <!-- YouTube Shorts Embed -->
-    <iframe 
-      src="https://www.youtube.com/embed/uId9h6CSAbY" 
-      title="YouTube Shorts"
-      allowfullscreen>
-    </iframe>
-
-    <!-- TikTok Video Card -->
-    <a href="https://www.tiktok.com/@pennybag276/video/7465765462291385646" target="_blank" style="
-      display: block;
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 0 15px #ae81ff88;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      color: white;
-      text-decoration: none;
-    " onmouseover="this.style.boxShadow='0 0 25px #ae81ffcc'; this.style.transform='scale(1.05)'" 
-       onmouseout="this.style.boxShadow='0 0 15px #ae81ff88'; this.style.transform='scale(1)'">
-      <p>🎬 Watch on TikTok</p>
-      <img src="https://www.edigitalagency.com.au/wp-content/uploads/TikTok-icon-glyph.png" 
-           alt="TikTok Logo" width="80px" style="margin-top: 10px;" />
-    </a>
-
-  </div>
-</section>
-  
-  <footer style="
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ae81ff;
-  text-align: center;
-  padding: 1rem;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  box-shadow: 0 -2px 10px #ae81ff40;
-  margin-top: 3rem;
-">
-  © 2025 Pennybag Gaming. All rights reserved.
-</footer>
-
+    <h2 style="text-align:center;">🎥 Featured Clips</h2>
+    <div class="video-gallery">
+      <iframe src="https://www.youtube.com/embed/uId9h6CSAbY" title="YouTube Shorts" allowfullscreen></iframe>
+      <a href="https://www.tiktok.com/@pennybag276/video/7465765462291385646" target="_blank" style="display: block; background-color: #1e1e1e; border-radius: 10px; padding: 1rem; box-shadow: 0 0 15px #ae81ff88; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; color: white; text-decoration: none;" onmouseover="this.style.boxShadow='0 0 25px #ae81ffcc'; this.style.transform='scale(1.05)'" onmouseout="this.style.boxShadow='0 0 15px #ae81ff88'; this.style.transform='scale(1)'">
+        <p>🎬 Watch on TikTok</p>
+        <img src="https://www.edigitalagency.com.au/wp-content/uploads/TikTok-icon-glyph.png" alt="TikTok Logo" width="80px" style="margin-top: 10px;">
+      </a>
+    </div>
+  </section>
+  <footer>
+    © 2025 Pennybag Gaming. All rights reserved.
+  </footer>
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const loader = document.getElementById("loader");
-    loader.style.transition = "opacity 1s ease";
-    loader.style.opacity = "0";
-    setTimeout(() => loader.style.display = "none", 1000);
-  });
-</script>
-
-    <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-</script>
-
-</script>
-
+    document.addEventListener("DOMContentLoaded", function () {
+      const loader = document.getElementById("loader");
+      loader.style.transition = "opacity 1s ease";
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 1000);
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
