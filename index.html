@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
  <style>
     body {
@@ -191,14 +193,14 @@ nav a:hover {
   </nav>
 </header>
 
- <section class="hero" id="home">
+ <section class="hero" id="home" data-aos="fade-up">
   <h1>Initializing Pennybag Protocol...</h1>
   <p>Explore the Matrix. Discover the drip. Join the movement.</p>
 </section>
 
-  <section class="section" id="products">
+  <section class="section" id="products" data-aos="zoom-in">
   <h2 style="text-align:center;">🛒 Pennybag Gear</h2>
-  <div class="product-grid">
+</section>
 
     <div class="product">
       <img src="images/product_mockups.png" alt="Pennybag Merch" style="width:100%; border-radius: 12px; box-shadow: 0 0 15px #ae81ff;" />
@@ -223,9 +225,10 @@ nav a:hover {
 </section>
 
 
-  <section class="section" id="socials">
+  <section class="section" id="socials" data-aos="fade-left">
   <h2 style="text-align:center;">🌐 Follow Pennybag</h2>
   <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+ </section>
 
     <!-- YouTube -->
     <a href="https://youtube.com/@PennybagGaming" target="_blank" style="
@@ -301,7 +304,7 @@ nav a:hover {
 
   </div>
 </section>
-  <section class="section" id="videos">
+  <section class="section" id="videos" data-aos="fade-right">
   <h2 style="text-align:center;">🎥 Featured Clips</h2>
   <div class="video-gallery">
 
@@ -354,6 +357,16 @@ nav a:hover {
     loader.style.opacity = "0";
     setTimeout(() => loader.style.display = "none", 1000);
   });
+  
+    <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+
 </script>
 
 </body>
