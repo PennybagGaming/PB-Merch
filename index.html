@@ -44,12 +44,20 @@
       gap: 1rem;
     }
     .product {
-      background: #222;
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 0 10px #ae81ff;
-    }
+      background: #111;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 15px #ae81ff88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ae81ffcc;
+  border-color: #ae81ff;
+}
     .social-icons a {
       margin: 0 0.5rem;
       color: #fff;
