@@ -154,6 +154,38 @@ nav a:hover {
   box-shadow: 0 0 25px #ae81ffcc;
   border-color: #ae81ff;
 }
+   .social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+   .social-links a {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffffcc;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px #ae81ff33;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-links a:hover {
+  color: #ae81ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ae81ff88;
+}
+
+.social-links i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
     .social-icons a {
       margin: 0 0.5rem;
       color: #fff;
@@ -232,8 +264,18 @@ nav a:hover {
 
   <section class="section" id="socials" data-aos="fade-left">
   <h2 style="text-align:center;">🌐 Follow Pennybag</h2>
-  <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
- </section>
+  <div class="social-links">
+    <a href="https://www.tiktok.com/@pennybag276" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok: Pennybag Gaming
+    </a>
+    <a href="https://www.twitch.tv/Pennybag" target="_blank">
+      <i class="fab fa-twitch"></i> Twitch: Pennybag
+    </a>
+    <a href="https://www.youtube.com/@PennybagGaming" target="_blank">
+      <i class="fab fa-youtube"></i> YouTube: Pennybag Gaming
+    </a>
+  </div>
+</section>
 
     <!-- YouTube -->
     <a href="https://youtube.com/@PennybagGaming" target="_blank" style="
