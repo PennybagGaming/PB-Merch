@@ -75,19 +75,31 @@ nav a:hover {
 .hero h1 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #ae81ff;
-  width: 0;
-  margin: auto;
   color: #ae81ff;
-  animation: typing 3s steps(30, end) forwards;
+  text-align: center;
+  margin: auto;
+  animation: glitchFadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+@keyframes glitchFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+    text-shadow: 0 0 5px #ae81ff88;
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.02);
+    text-shadow: 0 0 15px #ae81ff;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 8px #ae81ffaa;
+  }
 }
+
 
 .hero p {
   font-family: 'Orbitron', sans-serif;
