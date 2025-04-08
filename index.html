@@ -118,6 +118,22 @@ nav a:hover {
   </style>
 </head>
 <body>
+  <div id="loader" style="
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Share Tech Mono', monospace;
+  color: #ae81ff;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+">
+  Initializing Pennybag Protocol...
+</div>
+
   <header>
   <h1>Pennybag Gaming</h1>
   <nav>
@@ -269,5 +285,29 @@ nav a:hover {
 
   </div>
 </section>
+  
+  <footer style="
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ae81ff;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  box-shadow: 0 -2px 10px #ae81ff40;
+  margin-top: 3rem;
+">
+  © 2025 Pennybag Gaming. All rights reserved.
+</footer>
+
+  <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    loader.style.transition = "opacity 1s ease";
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 1000);
+  });
+</script>
+
 </body>
 </html>
