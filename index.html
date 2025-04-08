@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pennybag Gaming</title>
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+ <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,10 +29,29 @@
       padding: 3rem 1rem;
       background-color: rgba(0, 0, 0, 0.6);
     }
-    .hero h1 {
-      font-size: 3rem;
-      color: #ae81ff;
-    }
+   @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #ae81ff }
+}
+
+.hero h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ae81ff;
+  width: 0;
+  margin: auto;
+  animation:
+    typing 3s steps(30, end) forwards,
+    blink 0.75s step-end infinite;
+  color: #ae81ff;
+}
     .section {
       padding: 2rem;
       background-color: rgba(0, 0, 0, 0.7);
@@ -87,9 +107,9 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>Initiating Pennybag Protocol!</h1>
-    <p>Explore the Matrix. Discover the drip. Join the movement.</p>
-  </section>
+  <h1>Initializing Pennybag Protocol...</h1>
+  <p>Explore the Matrix. Discover the drip. Join the movement.</p>
+</section>
 
   <section class="section" id="products">
     <h2>Featured Products</h2>
